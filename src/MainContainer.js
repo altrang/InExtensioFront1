@@ -88,12 +88,15 @@ const MainContainer = () => {
           .catch(err => setError(err));
       }
     };
-    /* 
-    Fetch data only if searchValue is not empty and timer is not active 
+    /*
+    Fetch data only if searchValue is not empty and timer is not active
     to prevent useless fetch
     */
     if (searchValue !== "" && !timerActive) {
-      // Here we should use a lodash debounce to let the user types before fetching
+      /*
+      Here we should use a lodash debounce to let the user types before fetching
+      and prevent problem during fetch like concurrency
+      */
       fetchData();
     }
   }, [searchValue, timerActive]);

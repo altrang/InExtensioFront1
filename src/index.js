@@ -5,8 +5,8 @@ import MainContainer from "./MainContainer";
 
 function App() {
   return (
-    <div style={{width: '30%'}}>
-      <h1>Hello CodeSandbox</h1>
+    <div style={{ width: "30%" }}>
+      <h1>Hello InExtensoDigital</h1>
       <MainContainer />
     </div>
   );
